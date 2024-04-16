@@ -1,0 +1,10 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+platform: "android"
+defaultLocale: "US"
+elements:
+  gengduogongjuUiObject:
+    locators:
+      US: "id=更多工具"
+  shouhuodizhiUiObject:
+    locators:
+      US: "id=收货地址"

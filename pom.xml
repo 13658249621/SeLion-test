@@ -13,7 +13,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>false</skipTests>
-        <suiteXmlFile>src/test/resources/TestingSuite.xml</suiteXmlFile>
+        <suiteXmlFile>src/test/resources/AppTestSuite.xml</suiteXmlFile>
         <selion.version>1.2.0</selion.version>
     </properties>
 
@@ -43,10 +43,27 @@
             <version>${selion.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.9.0</version>
+        </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
         </dependency>
     </dependencies>
 
@@ -99,6 +116,11 @@
                 <configuration>
                     <basePackage>com.remo</basePackage>
                     <baseFolder>GUIData</baseFolder>
+                    <androidCustomElements>
+                        <androidCustomElement>
+                            com.remo.android.CustomUiButton
+                        </androidCustomElement>
+                    </androidCustomElements>
                 </configuration>
             </plugin>
             <plugin>
@@ -147,13 +169,13 @@
                 <executions>
                     <execution>
                         <id>add-source</id>
-                        <phase>generate-test-sources</phase>
+                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>add-test-source</goal>
+                            <goal>add-source</goal>
                         </goals>
                         <configuration>
                             <sources>
-                                <source>${project.build.directory}/generated-test-sources</source>
+                                <source>${project.build.directory}/generated-sources</source>
                             </sources>
                         </configuration>
                     </execution>

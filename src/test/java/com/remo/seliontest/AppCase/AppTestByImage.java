@@ -1,0 +1,77 @@
+package com.remo.seliontest.AppCase;
+import com.paypal.selion.platform.grid.SeLionAppiumAndroidDriver;
+import com.remo.seliontest.dataobjects.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import static Utils.ImageMatchUtil.clickByImage;
+
+
+public class AppTestByImage {
+    @Test
+    public void testLaunchPPHApp_android() throws Exception {
+        // 设置 Appium 服务器的 URL
+        URL url = null;
+        try {
+            url = new URL("http://localhost:4723/wd/hub");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("noReset", "true");
+        caps.setCapability("platformVersion", "10");
+        caps.setCapability("platformName", "Android");
+        caps.setCapability("deviceName", "e5f430b");
+//        caps.setCapability("appPackage", "org.mozilla.firefox");
+        caps.setCapability("appPackage", "com.sina.weibo");
+//        caps.setCapability("appActivity", "org.mozilla.fenix.HomeActivity");
+        caps.setCapability("appActivity", "com.sina.weibo.MainTabActivity");
+
+        SeLionAppiumAndroidDriver driver=new SeLionAppiumAndroidDriver(url,caps);
+        Thread.sleep(2000);
+//        File target = new File("/Users/admin/Downloads/目标7.png");
+        //通过imagegugu方法获取图片的坐标
+//        int[] result = imagegugu(driver, target);
+//        driver.tap(1,result[0],result[1],50);
+//        FireFoxMainPage fireFoxMainPage = new FireFoxMainPage("US");
+//        System.out.println(fireFoxMainPage.getBaiduButton().getLocator());
+        clickByImage(driver,new File(WeiboMainPage.我的.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(MyMainPage.我的订单.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(MyOrderMainPage.更多工具.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(MyOrderMainPage.收货地址.getImagePath()));
+        Thread.sleep(2000);
+        clickByImage(driver,new File(ReceiveAddressPage.添加地址.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.收货人姓名.getImagePath()));
+        driver.getKeyboard().sendKeys("张三");
+        driver.getKeyboard().sendKeys("123");
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.收货人手机号.getImagePath()));
+        driver.getKeyboard().sendKeys("13658249621");
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.选择地区.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.河北省.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.石家庄市.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.长安区.getImagePath()));
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.详细地址.getImagePath()));
+        driver.getKeyboard().sendKeys("31");
+        Thread.sleep(1000);
+        clickByImage(driver,new File(AddAddressPage.保存.getImagePath()));
+
+
+
+
+
+    }
+}
