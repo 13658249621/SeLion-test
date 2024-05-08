@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.paypal.selion.platform.grid.SeLionAppiumAndroidDriver;
 import okhttp3.*;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -49,30 +50,13 @@ public class ImageMatchUtil {
         System.out.println(response.body().string());
     }
 
-    public static int[] imageMatch(Object driver, File target) throws IOException, AWTException {
+    public static int[] imageMatch(JysAndroidDriver driver, File target) throws IOException, AWTException {
         OkHttpClient client = new OkHttpClient();
         File template = null;
-        if (driver instanceof SeLionAppiumAndroidDriver) {
-            System.out.println("SeLionAppiumAndroidDriver");
-            SeLionAppiumAndroidDriver appiumDriver = (SeLionAppiumAndroidDriver) driver;
-            long start = System.currentTimeMillis();
-            template = appiumDriver.getScreenshotAs(OutputType.FILE);
-            long end = System.currentTimeMillis();
-        }
-        else if (driver instanceof RemoteWebDriver) {
-            System.out.println("RemoteWebDriver");
-            RemoteWebDriver remoteWebDriver = (RemoteWebDriver) driver;
-            Robot robot = new Robot();
-            java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-            System.out.println("screenSize: " + screenSize);
-            screenSize.setSize(screenSize.getWidth(), screenSize.getHeight() - 70);
-            Rectangle screenRectangle = new Rectangle(0,25,1440,805);
-            BufferedImage image = robot.createScreenCapture(screenRectangle);
-            template = new File("screenshot.png");
-            ImageIO.write(image, "png", template);
-        }  else {
-            throw new IllegalArgumentException("Invalid driver type");
-        }
+        System.out.println("SeLionAppiumAndroidDriver");
+        template = driver.getScreenshotAs(OutputType.FILE);
+
+
         MediaType mediaType = MediaType.parse("image/jpeg");
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
@@ -97,21 +81,11 @@ public class ImageMatchUtil {
         return result;
     }
 
-    public static Boolean clickByImage(Object driver, File target) throws IOException, AWTException {
+    public static Boolean clickByImage(JysAndroidDriver driver, File target) throws IOException, AWTException {
         int[] result = imageMatch(driver, target);
-
-        if (driver instanceof JysAndroidDriver) {
-            System.out.println("JysAndroidDriver:");
-            ((JysAndroidDriver) driver).tap(1, result[0], result[1], 200);
-
-        } else if (driver instanceof RemoteWebDriver) {
-            System.out.println("RemoteWebDriver:");
-            Actions actions = new Actions((RemoteWebDriver) driver);
-            actions.moveByOffset(result[0], result[1]-164).click().perform();
-
-        } else {
-            throw new IllegalArgumentException("Invalid driver type");
-        }
+        System.out.println("JysAndroidDriver:");
+        ((JysAndroidDriver) driver).tap(1, result[0], result[1], 200);
         return true;
     }
+
 }

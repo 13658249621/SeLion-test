@@ -1,4 +1,4 @@
-package com.remo.seliontest.dataobjects;
+package com.remo.seliontest.PageObjects;
 
 public enum MyOrderMainPage {
     收货地址("收货地址", "./src/test/resources/GUIData/TargetImage/App/收货地址2.png"),

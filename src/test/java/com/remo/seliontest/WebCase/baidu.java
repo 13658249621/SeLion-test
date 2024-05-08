@@ -5,7 +5,7 @@ import com.paypal.selion.platform.dataprovider.DataResource;
 import com.paypal.selion.platform.dataprovider.SeLionDataProvider;
 import com.paypal.selion.platform.dataprovider.impl.InputStreamResource;
 import com.remo.TripMainPage;
-import com.remo.seliontest.dataobjects.LoginData;
+import com.remo.seliontest.PageObjects.LoginData;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -46,9 +46,9 @@ public class baidu {
         Thread.sleep(1000);
 
 //        actions.moveByOffset(788, 124).click().perform();
-        clickByImage(driver,new File(trip.getResouButton().getLocator()));
+//        clickByImage(driver,new File(trip.getResouButton().getLocator()));
         Thread.sleep(1000);
-        clickByImage(driver,new File(trip.getChakangengduobangdanButton().getLocator()));
+//        clickByImage(driver,new File(trip.getChakangengduobangdanButton().getLocator()));
 //        System.out.println("click account button:"+driver.findElementByXPath("//*[@id=\"bbz_accounts_pc_lg_box\"]/div/div/div[1]/div[1]/form/dl[1]/dd/input").getLocation());
 //        driver.findElementByXPath("//*[@id=\"bbz_accounts_pc_lg_box\"]/div/div/div[1]/div[1]/form/dl[1]/dd/input").click();
 //        driver.getKeyboard().sendKeys("13658249621");

@@ -6,6 +6,7 @@ import com.remo.App.EditAddressPage;
 import com.remo.App.MyAddressPage;
 import com.remo.App.MyMainPage;
 import com.remo.App.MyOrderMainPage;
+import com.remo.seliontest.PageObjects.WeiboMainPage;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -16,6 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import static Utils.CustomSeLionReporter.logAndCapture;
+import static Utils.ImageMatchUtil.clickByImage;
 
 
 public class AppTestByXpath {
@@ -49,22 +51,27 @@ public class AppTestByXpath {
         MyAddressPage myAddressPage = new MyAddressPage();
         EditAddressPage editAddressPage = new EditAddressPage();
         myAddressPage.getTianjiadizhiUiObject().getLocator();
-        jysAndroidDriver.findElement(weiboMobile.getWodeUiObject()).click();
+        clickByImage(jysAndroidDriver,new File(WeiboMainPage.我的.getImagePath()));
+        Thread.sleep(1000);
+//        jysAndroidDriver.findElement(weiboMobile.getWodeUiObject()).click();
         jysAndroidDriver.getScreenshotAs(OutputType.FILE);
         Thread.sleep(1000);
         jysAndroidDriver.findElement(myMainPage.getWodedingdanUiObject()).click();
+        Thread.sleep(1000);
         logAndCapture(jysAndroidDriver,"点击我的订单");
         Thread.sleep(1000);
         jysAndroidDriver.findElement(myOrderMainPage.getGengduogongjuUiObject()).click();
         logAndCapture(jysAndroidDriver,"点击更多工具");
         Thread.sleep(1000);
         jysAndroidDriver.findElement(myOrderMainPage.getShouhuodizhiUiObject()).click();
+        Thread.sleep(1000);
         logAndCapture(jysAndroidDriver,"点击收货地址");
-        Thread.sleep(1000);
         jysAndroidDriver.findElement(myAddressPage.getTianjiadizhiUiObject()).click();
-        logAndCapture(jysAndroidDriver,"点击添加地址");
         Thread.sleep(1000);
+        logAndCapture(jysAndroidDriver,"点击添加地址");
         jysAndroidDriver.findElement(editAddressPage.getShoujianrenUiObject()).click();
+        Thread.sleep(1000);
+        logAndCapture(jysAndroidDriver,"点击添加地址");
         jysAndroidDriver.findElement(editAddressPage.getShoujianrenUiObject()).sendKeys("123124");
 
     }

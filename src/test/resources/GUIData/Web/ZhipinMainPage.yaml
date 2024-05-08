@@ -2,18 +2,33 @@ baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
 pageTitle:
   US: "GSMArena.com - mobile phone reviews, news, specifications and more..."
 elements:
-  loginButton:
+  zhanghaoshuruButton:
     locators:
-      US: "class=btn btn-outline header-login-btn"
-  emailTextField:
+      US: "id=content"
+  dengluButton:
     locators:
-      US: "id=email"
+      US: "id=login"
+  yixianggoutongButton:
+    locators:
+      US: "linkText=意向沟通"
+  sousuoshurukuangButton:
+    locators:
+      US: "class=ipt-search"
+  sousuoButton:
+    locators:
+      US: "class=btn btn-search"
   passwordTextField:
     locators:
       US: "id=upass"
   submitButton:
     locators:
       US: "id=nick-submit"
+  baiduButton:
+    locators:
+      US: "id=su"
+  soutuButton:
+    locators:
+      US: "class=soutu-btn"
 pageValidators: [
   loginButton.isVisible,
   emailTextField.isPresent,

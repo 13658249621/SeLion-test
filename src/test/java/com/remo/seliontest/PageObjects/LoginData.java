@@ -1,4 +1,4 @@
-package com.remo.seliontest.dataobjects;
+package com.remo.seliontest.PageObjects;
 
 public class LoginData {
     private String email;

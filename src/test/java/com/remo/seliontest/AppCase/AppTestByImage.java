@@ -1,6 +1,7 @@
 package com.remo.seliontest.AppCase;
+import Utils.JysAndroidDriver;
 import com.paypal.selion.platform.grid.SeLionAppiumAndroidDriver;
-import com.remo.seliontest.dataobjects.*;
+import com.remo.seliontest.PageObjects.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
@@ -31,14 +32,8 @@ public class AppTestByImage {
 //        caps.setCapability("appActivity", "org.mozilla.fenix.HomeActivity");
         caps.setCapability("appActivity", "com.sina.weibo.MainTabActivity");
 
-        SeLionAppiumAndroidDriver driver=new SeLionAppiumAndroidDriver(url,caps);
+        JysAndroidDriver driver=new JysAndroidDriver(url,caps);
         Thread.sleep(2000);
-//        File target = new File("/Users/admin/Downloads/目标7.png");
-        //通过imagegugu方法获取图片的坐标
-//        int[] result = imagegugu(driver, target);
-//        driver.tap(1,result[0],result[1],50);
-//        FireFoxMainPage fireFoxMainPage = new FireFoxMainPage("US");
-//        System.out.println(fireFoxMainPage.getBaiduButton().getLocator());
         clickByImage(driver,new File(WeiboMainPage.我的.getImagePath()));
         Thread.sleep(1000);
         clickByImage(driver,new File(MyMainPage.我的订单.getImagePath()));

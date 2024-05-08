@@ -4,7 +4,7 @@ import com.paypal.selion.platform.dataprovider.DataProviderFactory;
 import com.paypal.selion.platform.dataprovider.DataResource;
 import com.paypal.selion.platform.dataprovider.SeLionDataProvider;
 import com.paypal.selion.platform.dataprovider.impl.InputStreamResource;
-import com.remo.seliontest.dataobjects.LoginData;
+import com.remo.seliontest.PageObjects.LoginData;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -47,7 +47,7 @@ public class WebTest {
 
 //        File target2 = new File(trip.getSearchButton().getLocator());
         //通过imagegugu方法获取图片的坐标
-        clickByImage(driver, new File(trip.getSearchButton().getLocator()));
+//        clickByImage(driver, new File(trip.getSearchButton().getLocator()));
 //        int[] result = imagegugu(driver, target2);
 //        actions.moveByOffset(result[0]/2, result[1]/2).click().release().build().perform();
 

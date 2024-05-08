@@ -38,7 +38,6 @@ public class JysAndroidDriver extends AndroidDriver {
         } else {
             return this.findElementByXPath(using);
         }
-
     }
     public WebElement findElement(UiObject uiButton) {
         //判断是否有=号，没有则用xpath定位，有则根据=号前的字符判断使用不同的定位方式

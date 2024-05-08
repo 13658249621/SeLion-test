@@ -1,4 +1,4 @@
-package com.remo.seliontest.dataobjects;
+package com.remo.seliontest.PageObjects;
 
 public enum MyMainPage {
     我的订单("我的订单", "./src/test/resources/GUIData/TargetImage/App/我的订单.png");

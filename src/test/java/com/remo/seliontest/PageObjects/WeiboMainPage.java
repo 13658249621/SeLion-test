@@ -1,4 +1,4 @@
-package com.remo.seliontest.dataobjects;
+package com.remo.seliontest.PageObjects;
 
 public enum WeiboMainPage {
     我的("我的", "./src/test/resources/GUIData/TargetImage/App/我的.png");

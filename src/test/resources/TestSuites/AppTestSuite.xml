@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="Selion Test"
+       skipfailedinvocationcounts="false" junit="false" parallel="classes"
+       data-provider-thread-count="1" annotations="JDK">
+    <!--    <parameter name="seleniumhost" value="http://localhost:4723/wd/hub" />-->
+    <parameter name="runLocally" value="true"/>
+    <parameter name="mobileNodeType" value="appium"/>
+
+    <test name="意向沟通业务">
+        <classes>
+            <!--      <class name="com.remo.seliontest.AppCase.AppTestByXpath"></class>-->
+<!--            <class name="com.remo.seliontest.WebCase.WebCase"></class>-->
+            <class name="com.remo.seliontest.WebCase.WebByImage"></class>
+        </classes>
+    </test>
+
+<!--    <test name="抢单平台页面">-->
+<!--        <classes>-->
+<!--                  <class name="com.remo.seliontest.AppCase.AppTestByXpath"></class>-->
+<!--&lt;!&ndash;            <class name="com.remo.seliontest.AppCase.AppTestByImage"></class>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

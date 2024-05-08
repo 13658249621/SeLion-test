@@ -1,4 +1,4 @@
-package com.remo.seliontest.dataobjects;
+package com.remo.seliontest.PageObjects;
 
 public enum AddAddressPage {
     保存("保存", "./src/test/resources/GUIData/TargetImage/App/保存.png"),
