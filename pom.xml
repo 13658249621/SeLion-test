@@ -117,7 +117,7 @@
                 <version>${selion.version}</version>
                 <executions>
                     <execution>
-                        <phase>generate-test-sources</phase>
+                        <phase>generate-sources</phase>
                         <goals>
                             <goal>generate-test</goal>
                         </goals>
