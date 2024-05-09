@@ -82,7 +82,7 @@
                 </excludes>
             </testResource>
         </testResources>
-        <outputDirectory>target/generated-test-sources/com</outputDirectory>
+        <outputDirectory>target/generated-test-sources/com/remo</outputDirectory>
 
         <plugins>
             <plugin>
