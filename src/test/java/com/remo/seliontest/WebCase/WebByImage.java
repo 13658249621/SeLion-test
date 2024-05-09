@@ -28,11 +28,11 @@ public class WebByImage {
         driver.findElement(zhipinMainPage.getYixianggoutongButton()).click();
         Thread.sleep(1000);
         logAndCapture(driver, "点击意向沟通");
-        Actions actions = new Actions(driver);
-        actions.moveByOffset(848, 780).click().perform();
-        //换一种方式，不使用actions
-//        clickByImage(driver, new File(ZhipinPage.问意向.getImagePath()));
-        Thread.sleep(1000);
+//        Actions actions = new Actions(driver);
+//        actions.moveByOffset(848, 780).click().perform();
+//        //换一种方式，不使用actions
+////        clickByImage(driver, new File(ZhipinPage.问意向.getImagePath()));
+//        Thread.sleep(1000);
         
 //        logAndCapture(  driver, "点击发现");
 //        clickByImage(driver, new File(ZhipinPage.首页.getImagePath()));
