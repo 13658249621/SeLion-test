@@ -1,14 +1,9 @@
-package Utils;
+package com.remo.seliontest.Utils;
 
 import com.paypal.selion.platform.html.Button;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
-
-import java.net.URL;
 
 public class JysWebDriver extends ChromeDriver {
     public JysWebDriver() {

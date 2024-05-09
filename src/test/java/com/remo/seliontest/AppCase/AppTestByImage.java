@@ -1,6 +1,5 @@
 package com.remo.seliontest.AppCase;
-import Utils.JysAndroidDriver;
-import com.paypal.selion.platform.grid.SeLionAppiumAndroidDriver;
+import com.remo.seliontest.Utils.JysAndroidDriver;
 import com.remo.seliontest.PageObjects.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
@@ -9,7 +8,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static Utils.ImageMatchUtil.clickByImage;
+import static com.remo.seliontest.Utils.ImageMatchUtil.clickByImage;
 
 
 public class AppTestByImage {

@@ -1,19 +1,13 @@
-package Utils;
+package com.remo.seliontest.Utils;
 
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.paypal.selion.platform.grid.SeLionAppiumAndroidDriver;
 import okhttp3.*;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import javax.imageio.ImageIO;
 
 import java.io.IOException;
 

@@ -1,23 +1,21 @@
 package com.remo.seliontest.AppCase;
-import Utils.JysAndroidDriver;
+
 import com.paypal.selion.annotations.MobileTest;
+
 import com.remo.App.*;
-import com.remo.App.EditAddressPage;
-import com.remo.App.MyAddressPage;
-import com.remo.App.MyMainPage;
-import com.remo.App.MyOrderMainPage;
 import com.remo.seliontest.PageObjects.WeiboMainPage;
+import org.junit.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import com.remo.seliontest.Utils.JysAndroidDriver;
 
-import static Utils.CustomSeLionReporter.logAndCapture;
-import static Utils.ImageMatchUtil.clickByImage;
+import static com.remo.seliontest.Utils.CustomSeLionReporter.logAndCapture;
+import static com.remo.seliontest.Utils.ImageMatchUtil.clickByImage;
 
 
 public class AppTestByXpath {

@@ -1,12 +1,12 @@
 package com.remo.seliontest.WebCase;
 
-import Utils.JysWebDriver;
+import com.remo.seliontest.Utils.JysWebDriver;
 import com.remo.Web.ZhipinMainPage;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import java.awt.*;
 import java.io.IOException;
-import static Utils.CustomSeLionReporter.logAndCapture;
+import static com.remo.seliontest.Utils.CustomSeLionReporter.logAndCapture;
 
 public class WebCase {
     private static final String URL = "https://boss-m-qa.weizhipin.com/web/boss/login.html";

@@ -1,5 +1,5 @@
 package com.remo.seliontest.WebCase;
-import com.remo.TripMainPage;
+
 import com.paypal.selion.platform.dataprovider.DataProviderFactory;
 import com.paypal.selion.platform.dataprovider.DataResource;
 import com.paypal.selion.platform.dataprovider.SeLionDataProvider;
@@ -12,11 +12,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.awt.*;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
-import static Utils.ImageMatchUtil.clickByImage;
 
 public class WebTest {
     private static final String URL = "https://www.baidu.com/";
@@ -40,7 +37,7 @@ public class WebTest {
         Actions actions = new Actions(driver);
         driver.manage().window().maximize();
         System.out.println(driver.manage().window().getSize());
-        TripMainPage trip = new TripMainPage();
+
         Thread.sleep(1000);
 //        actions.moveByOffset(811, 240).click().perform();
 //        actions.moveByOffset(939, 188).click().release().build().perform();

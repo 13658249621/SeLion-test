@@ -1,4 +1,4 @@
-package Utils;
+package com.remo.seliontest.Utils;
 
 import com.paypal.selion.internal.reports.model.BaseLog;
 import org.openqa.selenium.OutputType;

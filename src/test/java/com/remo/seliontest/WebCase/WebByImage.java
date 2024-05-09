@@ -1,6 +1,6 @@
 package com.remo.seliontest.WebCase;
 
-import Utils.JysWebDriver;
+import com.remo.seliontest.Utils.JysWebDriver;
 import com.remo.Web.ZhipinMainPage;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -8,13 +8,13 @@ import org.testng.annotations.Test;
 import java.awt.*;
 import java.io.IOException;
 
-import static Utils.CustomSeLionReporter.logAndCapture;
+import static com.remo.seliontest.Utils.CustomSeLionReporter.logAndCapture;
 
 public class WebByImage {
     private static final String URL = "https://boss-m-qa.weizhipin.com/web/boss/login.html";
     @Test
     public void WebCase() throws IOException, InterruptedException, AWTException {
-        System.setProperty("webdriver.chrome.driver", "/Users/admin/SeLion-test/src/test/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/admin/IdeaProjects/SeLion-test/src/test/resources/chromedriver");
         JysWebDriver driver = new JysWebDriver();
         driver.get(URL);
         ZhipinMainPage zhipinMainPage = new ZhipinMainPage();
@@ -32,7 +32,7 @@ public class WebByImage {
         //换一种方式，不使用actions
 //        clickByImage(driver, new File(ZhipinPage.问意向.getImagePath()));
         Thread.sleep(1000);
-
+        
 //        logAndCapture(  driver, "点击发现");
 //        clickByImage(driver, new File(ZhipinPage.首页.getImagePath()));
 //        Thread.sleep(1000);

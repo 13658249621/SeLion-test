@@ -1,6 +1,5 @@
-package Utils;
+package com.remo.seliontest.Utils;
 
-import com.paypal.selion.platform.mobile.android.UiButton;
 import com.paypal.selion.platform.mobile.android.UiObject;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.Capabilities;

@@ -10,7 +10,7 @@ elements:
       US: "id=login"
   yixianggoutongButton:
     locators:
-      US: "linkText=意向沟通"
+      US: "partialLinkText=意向沟通"
   sousuoshurukuangButton:
     locators:
       US: "class=ipt-search"
