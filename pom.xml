@@ -65,16 +65,6 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.75</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
@@ -117,7 +107,7 @@
                 <version>${selion.version}</version>
                 <executions>
                     <execution>
-                        <phase>generate-sources</phase>
+                        <phase>generate-test-sources</phase>
                         <goals>
                             <goal>generate-test</goal>
                         </goals>
@@ -179,13 +169,13 @@
                 <executions>
                     <execution>
                         <id>add-source</id>
-                        <phase>generate-sources</phase>
+                        <phase>generate-test-sources</phase>
                         <goals>
-                            <goal>add-source</goal>
+                            <goal>add-test-source</goal>
                         </goals>
                         <configuration>
                             <sources>
-                                <source>${project.build.directory}/generated-sources</source>
+                                <source>${project.build.directory}/generated-test-sources</source>
                             </sources>
                         </configuration>
                     </execution>
