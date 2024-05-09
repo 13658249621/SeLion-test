@@ -4,15 +4,14 @@ import com.paypal.selion.annotations.MobileTest;
 
 import com.remo.App.*;
 import com.remo.seliontest.PageObjects.WeiboMainPage;
-import org.junit.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import com.remo.seliontest.Utils.JysAndroidDriver;
+import org.testng.annotations.Test;
 
 import static com.remo.seliontest.Utils.CustomSeLionReporter.logAndCapture;
 import static com.remo.seliontest.Utils.ImageMatchUtil.clickByImage;

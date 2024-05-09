@@ -1,6 +1,7 @@
 package com.remo.seliontest.AppCase;
 import com.remo.seliontest.Utils.JysAndroidDriver;
 import com.remo.seliontest.PageObjects.*;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 

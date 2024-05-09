@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.remo</groupId>
     <artifactId>seliontest</artifactId>
@@ -71,6 +71,10 @@
             <version>4.13.2</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -82,7 +86,6 @@
                 </excludes>
             </testResource>
         </testResources>
-        <outputDirectory>target/generated-test-sources/com/remo</outputDirectory>
 
         <plugins>
             <plugin>
@@ -153,10 +156,10 @@
                     </includes>
 
                     <!-- You can specify a specific testng.xml file here -->
-                    <!--  
-                    <suiteXmlFiles> 
-                        <suiteXmlFile>src/test/resources/testng-sample.xml</suiteXmlFile> 
-                    </suiteXmlFiles> 
+                    <!--
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng-sample.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                     -->
 
                     <!-- Or dynamically with something like '-DsuiteXmlFile=src/test/resources/testng-sample.xml' -->
@@ -191,7 +194,7 @@
         </plugins>
         <pluginManagement>
             <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven 
+                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven
                     build itself. -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
