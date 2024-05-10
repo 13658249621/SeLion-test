@@ -14,7 +14,7 @@ public class CustomSeLionReporter {
     public static void logAndCapture(JysWebDriver driver, String message) {
         // 截图并保存到项目中
         File screenshot = driver.getScreenshotAs(OutputType.FILE);
-        Path destPath = Paths.get(System.getProperty("user.dir"), "test-output", "screenshots", screenshot.getName());
+        Path destPath = Paths.get(System.getProperty("user.dir"), "target/surefire-reports", "screenshots", screenshot.getName());
         try {
             Files.createDirectories(destPath.getParent());
             Files.copy(screenshot.toPath(), destPath);
@@ -31,7 +31,7 @@ public class CustomSeLionReporter {
     public static void logAndCapture(JysAndroidDriver driver, String message) {
         // 截图并保存到文件系统中
         File screenshot = driver.getScreenshotAs(OutputType.FILE);
-        Path destPath = Paths.get(System.getProperty("user.dir"), "test-output", "screenshots", screenshot.getName());
+        Path destPath = Paths.get(System.getProperty("user.dir"), "target/surefire-reports", "screenshots", screenshot.getName());
         try {
             Files.createDirectories(destPath.getParent());
             Files.copy(screenshot.toPath(), destPath);
