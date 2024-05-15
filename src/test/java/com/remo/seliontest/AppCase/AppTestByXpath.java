@@ -88,5 +88,6 @@ public class AppTestByXpath {
         jysAndroidDriver.findElement(editAddressPage.getBaocunUiObject()).click();
         Thread.sleep(2000);
         logAndCapture(jysAndroidDriver,"点击保存");
+        jysAndroidDriver.quit();
     }
 }

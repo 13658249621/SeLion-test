@@ -68,6 +68,7 @@ public class AppTestByImage {
         driver.getKeyboard().sendKeys("31");
         Thread.sleep(1000);
         clickByImage(driver,new File(AddAddressPO.保存.getImagePath()));
+        driver.quit();
 
 
 

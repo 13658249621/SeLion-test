@@ -8,10 +8,10 @@
 
     <test name="意向沟通业务">
         <classes>
-<!--                  <class name="com.remo.seliontest.AppCase.AppTestByXpath"></class>-->
+                  <class name="com.remo.seliontest.AppCase.AppTestByXpath"></class>
                         <class name="com.remo.seliontest.AppCase.AppTestByImage"></class>
 <!--            <class name="com.remo.seliontest.WebCase.WebCase"></class>-->
-<!--            <class name="com.remo.seliontest.WebCase.WebCaseRelease"></class>-->
+            <class name="com.remo.seliontest.WebCase.WebCaseRelease"></class>
         </classes>
     </test>
 
