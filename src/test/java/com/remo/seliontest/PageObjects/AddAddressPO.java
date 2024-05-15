@@ -1,6 +1,6 @@
 package com.remo.seliontest.PageObjects;
 
-public enum AddAddressPage {
+public enum AddAddressPO {
     保存("保存", "./src/test/resources/GUIData/TargetImage/App/保存.png"),
     详细地址("详细地址", "./src/test/resources/GUIData/TargetImage/App/详细地址.png"),
     长安区("长安区", "./src/test/resources/GUIData/TargetImage/App/长安区.png"),
@@ -13,7 +13,7 @@ public enum AddAddressPage {
     private final String elementName;
     private final String imagePath;
 
-    AddAddressPage(String elementName, String imagePath) {
+    AddAddressPO(String elementName, String imagePath) {
         this.elementName = elementName;
         this.imagePath = imagePath;
     }

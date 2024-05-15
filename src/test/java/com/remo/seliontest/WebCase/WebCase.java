@@ -14,7 +14,7 @@ public class WebCase {
     private static final String URL = "https://boss-m-qa.weizhipin.com/web/boss/login.html";
     @Test
     public void WebCase() throws IOException, InterruptedException, AWTException {
-        System.setProperty("webdriver.chrome.driver", "/Users/admin/SeLion-test/src/test/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/admin/IdeaProjects/SeLion-test/src/test/resources/chromedriver");
         JysWebDriver driver = new JysWebDriver();
         driver.get(URL);
         ZhipinMainPage zhipinMainPage = new ZhipinMainPage();

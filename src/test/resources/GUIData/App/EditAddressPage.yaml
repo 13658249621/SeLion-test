@@ -4,16 +4,25 @@ defaultLocale: "US"
 elements:
   shoujianrenUiObject:
     locators:
-      US: "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View/android.widget.EditText"
+      US: "//*[@text='请填写收货人姓名']"
   shoujihaoUiObject:
     locators:
-      US: "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[4]/android.view.View/android.widget.EditText"
+      US: "//*[@text='请填写收货人手机号']"
   suozaidiquUiObject:
     locators:
-      US: "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[6]"
+      US: "//*[@text='请选择']"
   xiangxidizhiUiObject:
     locators:
-      US: "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[8]/android.view.View/android.widget.EditText"
+      US: "//*[@text='请填写详细地址']"
+  beijingshengUiObject:
+    locators:
+      US: "//android.view.View[@text='北京市']"
+  beijingshiUiObject:
+    locators:
+      US: "(//android.view.View[@text='北京市'])[2]"
+  dongchengquUiObject:
+    locators:
+      US: "//android.view.View[@text='东城区']"
   baocunUiObject:
     locators:
-      US: "name=保存"
+      US: "//android.view.View[@text='保存']"

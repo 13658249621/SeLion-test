@@ -2,6 +2,9 @@ baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
 pageTitle:
   US: "GSMArena.com - mobile phone reviews, news, specifications and more..."
 elements:
+  woyaozhaopinButton:
+    locators:
+      US: "partialLinkText=我要招聘"
   zhanghaoshuruButton:
     locators:
       US: "id=content"
@@ -11,12 +14,24 @@ elements:
   yixianggoutongButton:
     locators:
       US: "partialLinkText=意向沟通"
-  sousuoshurukuangButton:
+  wodedingdanButton:
     locators:
-      US: "class=ipt-search"
-  sousuoButton:
+      US: "css=.my-order-btn"
+  goutongwanchengButton:
     locators:
-      US: "class=btn btn-search"
+      US: "//span[contains(text(), '沟通完成')]"
+  guanbiyindaoyiButton:
+    locators:
+      US: "css=.icon-guide-close"
+  guanbiyindaoerButton:
+    locators:
+      US: "//div[contains(@class, 'guide')]//i[1]"
+  chakanyixiangButton:
+    locators:
+      US: "//span[contains(text(), '查看意向')]"
+  niurenjianliButton:
+    locators:
+      US: "css=.resume-btn"
   passwordTextField:
     locators:
       US: "id=upass"

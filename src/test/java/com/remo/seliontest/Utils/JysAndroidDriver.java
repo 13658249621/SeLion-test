@@ -60,9 +60,11 @@ public class JysAndroidDriver extends AndroidDriver {
             } else if (str[0].equals("css")) {
                 return this.findElementByCssSelector(str[1]);
             } else {
-                return null;
+                System.out.println("正在使用xpath定位1");
+                return this.findElementByXPath(using);
             }
         } else {
+            System.out.println("正在使用xpath定位2");
             return this.findElementByXPath(using);
         }
 

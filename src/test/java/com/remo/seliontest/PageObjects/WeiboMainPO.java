@@ -1,12 +1,10 @@
 package com.remo.seliontest.PageObjects;
 
-public enum MyMainPage {
-    我的订单("我的订单", "./src/test/resources/GUIData/TargetImage/App/我的订单.png");
-
+public enum WeiboMainPO {
+    我的("我的", "./src/test/resources/GUIData/TargetImage/App/我的.png");
     private final String elementName;
     private final String imagePath;
-
-    MyMainPage(String elementName, String imagePath) {
+    WeiboMainPO(String elementName, String imagePath) {
         this.elementName = elementName;
         this.imagePath = imagePath;
     }
